@@ -7,12 +7,22 @@
 import { InnerRenderFunction, RenderContext, start } from "$fresh/server.ts";
 import manifest from "./fresh.gen.ts";
 
-import { config, setup } from "@twind";
+import { setup } from "@twind";
 import { virtualSheet } from "twind/sheets";
 
 const sheet = virtualSheet();
 sheet.reset();
-setup({ ...config, sheet });
+setup({
+  theme: {
+    fontSize: {
+      xs: "10px",
+      sm: "12px",
+      base: "13px",
+      lg: "16px",
+    },
+  },
+  sheet,
+});
 
 function render(ctx: RenderContext, render: InnerRenderFunction) {
   const snapshot = ctx.state.get("twind") as unknown[] | null;
