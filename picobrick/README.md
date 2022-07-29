@@ -1,5 +1,12 @@
 # Picobrick
 
+## Running
+
+```shell
+# replace PI_PORT with the actual value where the Raspberry Pi Pico is connected
+PI_PORT=/dev/tty.usbmodemXXX poe version
+```
+
 ## Memo
 
 ### Regarding the Python Version
