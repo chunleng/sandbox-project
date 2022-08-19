@@ -35,7 +35,7 @@ pub fn counter(props: &CounterProps) -> Html {
     html! {
         <div>
             <button {onclick}>{ "+1" }</button>
-            <p>{ *counter }</p>
+            <p class="text-5xl">{ *counter }</p>
         </div>
     }
 }
